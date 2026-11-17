@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Melissa">
+    <title>nu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Cartão Elo</h1>
+
+    <a href="cartoes.html">Voltar para cartões</a>
+
+    <h2>Fatura</h2>
+
+    <form id="formConfiguracao">
+
+        <label>Data de fechamento:</label>
+        <input type="date" id="fechamento" required>
+
+        <label>Data de vencimento:</label>
+        <input type="date" id="vencimento" required>
+
+        <label>Juros mensal (%):</label>
+        <input type="number" id="juros" min="0" step="0.01" required>
+
+        <button type="submit">Salvar configurações</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Registrar compra</h2>
+
+    <form id="formCompra">
+
+        <label>Nome da compra:</label>
+        <input type="text" id="descricao" placeholder="Ex.: Supermercado" required>
+
+        <label>Valor:</label>
+        <input type="number" id="valor" min="0.01" step="0.01" required>
+
+        <label>Data da compra:</label>
+        <input type="date" id="dataCompra" required>
+
+        <button type="submit">Adicionar compra</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Registrar pagamento</h2>
+
+    <form id="formPagamento">
+
+        <label>Valor pago:</label>
+        <input type="number" id="valorPago" min="0.01" step="0.01" required>
+
+        <label>Data do pagamento:</label>
+        <input type="date" id="dataPagamento" required>
+
+        <button type="submit">Registrar pagamento</button>
+
+    </form>
+
+    <hr>
+
+    <h2>Resumo da fatura</h2>
+
+    <p>Total das compras: <span id="totalCompras">R$ 0,00</span></p>
+
+    <p>Total pago: <span id="totalPago">R$ 0,00</span></p>
+
+    <p>Juros acumulados: <span id="totalJuros">R$ 0,00</span></p>
+
+    <h2>Saldo devedor: <span id="saldo">R$ 0,00</span></h2>
+
+    <hr>
+
+    <h2>Minhas compras</h2>
+
+    <ul id="listaCompras"></ul>
+
+    <h2>Histórico de pagamentos</h2>
+
+    <ul id="listaPagamentos"></ul>
+
+    <script src="js/elo.js"></script>
+    <a href="index.html">voltar para o cadastro</a>
+
+</body>
+</html>
